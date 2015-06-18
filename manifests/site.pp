@@ -23,6 +23,7 @@ node default {
    password => '$6$sulfzRA6$KmWrCBtzFZc6a7jLWCIwQ07aEA4aQnpVBkV/4MGde2nRYi8sA9OvnRUoH2MmbGa1CRHF9j3CGmV8slk8jlEdX1',
    gid      => 'sysadmins',
    home     => '/home/grantb',
+   managehome => true,
   require   => Group['sysadmins'],
   }
 
@@ -33,6 +34,7 @@ node default {
    shell    => '/bin/bash',
    password => '$6$sulfzRA6$KmWrCBtzFZc6a7jLWCIwQ07aEA4aQnpVBkV/4MGde2nRYi8sA9OvnRUoH2MmbGa1CRHF9j3CGmV8slk8jlEdX1',
    gid      => 'sysadmins',
+   managehome => true,
    require  => Group['sysadmins'],
     }
 
