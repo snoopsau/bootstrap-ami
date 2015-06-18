@@ -1,0 +1,3 @@
+search intelligentpathways.com.au
+nameserver 8.8.8.8
+
