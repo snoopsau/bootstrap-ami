@@ -17,7 +17,7 @@ node default {
 
   user { 'grantb':
     name    => 'grantb',
-   groups   => 'wheel',
+   groups   => ['wheel', 'sysadmins',],
    comment  => 'Puppetkzjdksjdskd  Managed User',
    shell    => '/bin/bash',
    password => '$6$sulfzRA6$KmWrCBtzFZc6a7jLWCIwQ07aEA4aQnpVBkV/4MGde2nRYi8sA9OvnRUoH2MmbGa1CRHF9j3CGmV8slk8jlEdX1',
@@ -38,10 +38,10 @@ node default {
   user { 'zainab':
   name      => 'zainab',
   uid       => '1002',
-   groups   => 'wheel',
+   groups   => ['wheel', 'sysadmins',],
    comment  => 'Puppet Managed User',
    shell    => '/bin/bash',
-   password => '$6$sulfzRA6$KmWrCBtzFZc6a7jLWCIwQ07aEA4aQnpVBkV/4MGde2nRYi8sA9OvnRUoH2MmbGa1CRHF9j3CGmV8slk8jlEdX1',
+   password => '$6$vpBd2Pbx$oHz9qKGE0aPU0DgZ.HxhF7csVHTFZ773Wlzhqcm/.VwnTqs4jdlrTLPw.TdyOU43A.HdQmvmPp7zFSUCP86dP0',
    gid      => 'sysadmins',
    managehome => true,
    require  => Group['sysadmins'],
