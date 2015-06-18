@@ -37,6 +37,7 @@ node default {
 
   user { 'zainab':
   name      => 'zainab',
+  uid       => '1001',
    groups   => 'wheel',
    comment  => 'Puppet Managed User',
    shell    => '/bin/bash',
@@ -45,6 +46,12 @@ node default {
    managehome => true,
    require  => Group['sysadmins'],
     }
+
+ ssh_authorized_key { 'zainab@macbookpro':
+    user => 'zainab',
+    type => 'ssh-rsa',
+    key  => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCzgq0BJNgltYGhDNdjhY9rhGpniXCRgjN7mrR/7sizmMcZ/a8oRUuMVFd2h/swHwRUjhAtldpMR482mE6PDl5mFxbnzwqeky9tGtfpb4IzozCsohbLKwbsd1z7C0cOJWBgjQD073HXLrUqi2b1I/v8Lo+xir76n5+QR6Gxdz/qjAz/eJ0FDWKF0vDaJdvwJ9Ubf3CQEnHM3rDaCDKYjmJfAr+V7c+AUYX0Zf3MU9GMoRrI65NKAMLdvAcUJ5VW7TVP6QylqlYPwY3J9hYsvUuuHKdnS1RGzJZzyO8k+6w7tdczfbAht4De1VLyKl4eMBVjCJZg4XMfDpFiKYJyh0+f',
+}
 
 
   # Clean up the host
