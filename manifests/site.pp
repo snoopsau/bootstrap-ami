@@ -37,7 +37,7 @@ node default {
 
   user { 'zainab':
   name      => 'zainab',
-  uid       => '1001',
+  uid       => '1002',
    groups   => 'wheel',
    comment  => 'Puppet Managed User',
    shell    => '/bin/bash',
