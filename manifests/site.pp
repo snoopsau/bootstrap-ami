@@ -46,10 +46,17 @@ node default {
    require  => Group['sysadmins'],
     }
 
+
+  # Clean up the host
   user {'root':
     ensure   => 'present',
     password => '*',
   }
+
+  user {'ec2-user':
+    ensure => 'absent',
+    managehome => true,
+}
 
   group { 'sysadmins':
   name => 'sysadmins',
